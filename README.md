@@ -4,6 +4,7 @@ Este é um aplicativo de mensagens desenvolvido em React Native, utilizando Type
 Para testar o código:
 - Clone o repositório
 - Execute no terminal "npm i" para instalar as dependências e criar o node_modules
+- entre na pasta que contem o app "cd message-app"
 - Execute no terminal "npx expo start" para inicializar o expo.
 Se desejar já iniciar com os emuladores:
     "android": "expo start --android",
