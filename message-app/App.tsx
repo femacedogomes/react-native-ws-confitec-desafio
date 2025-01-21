@@ -9,7 +9,7 @@ const App = () => {
   const { messages, connectionStatus, sendMessage } = useWebSocket("ws://localhost:8080");
   const [input, setInput] = useState("");
 
-  const handleSend = () => {
+  const handleSendMessage = () => {
     if (input.trim()) {
       sendMessage("React Native", input);
       setInput("");
@@ -21,7 +21,7 @@ const App = () => {
       <Text style={styles.title}> Bate-Papo </Text>
       <StatusIndicator connected={connectionStatus} />
       <MessageList messages={messages} />
-      <MessageInput value={input} onChangeText={setInput} onSend={handleSend} />
+      <MessageInput value={input} onChangeText={setInput} onSend={handleSendMessage} />
     </SafeAreaView>
   );
 };

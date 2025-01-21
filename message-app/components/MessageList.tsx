@@ -1,21 +1,21 @@
 import React, { useRef, useEffect } from "react";
 import { FlatList, StyleSheet, View, Text } from "react-native";
 
-interface Message {
+interface IMessage {
   id: number;
   sender: string;
   message: string;
   timestamp: string;
 }
 
-interface Props {
-  messages: Message[];
+interface IMessageList {
+  messages: IMessage[];
 }
 
-const MessageList: React.FC<Props> = ({ messages }) => {
-  const flatListRef = useRef<FlatList<Message>>(null);
+const MessageList: React.FC<IMessageList> = ({ messages }) => {
+  const flatListRef = useRef<FlatList<IMessage>>(null);
 
-  const renderItem = ({ item }: { item: Message }) => (
+  const renderItem = ({ item }: { item: IMessage }) => (
     <View style={styles.message}>
       <View
         style={styles.messageContainer}

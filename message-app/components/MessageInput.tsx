@@ -1,13 +1,13 @@
 import React from "react";
 import { View, TextInput, TouchableOpacity, Text, StyleSheet } from "react-native";
 
-interface Props {
+interface IMessageInput {
   value: string;
   onChangeText: (text: string) => void;
   onSend: () => void;
 }
 
-const MessageInput: React.FC<Props> = ({ value, onChangeText, onSend }) => (
+const MessageInput: React.FC<IMessageInput> = ({ value, onChangeText, onSend }) => (
   <View style={styles.container}>
     <TextInput
       style={styles.input}

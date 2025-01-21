@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-interface Message {
+interface IMessage {
   id: number;
   sender: string;
   message: string;
@@ -8,7 +8,7 @@ interface Message {
 }
 
 const useWebSocket = (url: string) => {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<IMessage[]>([]);
   const [connectionStatus, setConnectionStatus] = useState(false);
   const ws = useRef<WebSocket | null>(null);
 

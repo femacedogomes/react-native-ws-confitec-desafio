@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-interface Props {
+interface IStatusIndicator {
   connected: boolean;
 }
 
-const StatusIndicator: React.FC<Props> = ({ connected }) => (
+const StatusIndicator: React.FC<IStatusIndicator> = ({ connected }) => (
   <View style={styles.container}>
     <Text style={connected ? styles.onlineText : styles.offlineText}>
       {connected ? "Conectado" : "Desconectado"}
